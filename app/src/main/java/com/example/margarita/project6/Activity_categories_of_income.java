@@ -26,7 +26,7 @@ public class Activity_categories_of_income extends AppCompatActivity {
         Cursor c = db.rawQuery("SELECT * FROM categories;", null);
         String[] fields = {"_id", "cat_name", "type"};
         //int[] resIds = {R.id.id, R.id.city_name, R.id.country};
-        //SimpleCursorAdapter adapter = new SimpleCursorAdapter(this, R.layout.activity_categories_of_income, c, fields, resIds,0);
+        //SimpleCursorAdapter adapter = new SimpleCursorAdapter(this, R.category_item, c, fields, resIds,0);
         //catList.setAdapter(adapter);
 
     }
