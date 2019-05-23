@@ -8,27 +8,24 @@
     tools:context=".Activity_categories_of_income">
 
     <EditText
-        android:id="@+id/new_categories"
+        android:id="@+id/cat_name"
         android:layout_width="match_parent"
-        android:layout_height="74dp"
+        android:layout_height="wrap_content"
         android:hint="Введите категорию" />
 
 
     <Button
         android:id="@+id/button"
-        style="@style/Widget.AppCompat.Button"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="++ добавить"
-        app:layout_anchorGravity="top|center" />
+        android:text="добавить"
+         />
 
-    <ListView
+   <ListView
         android:id="@+id/citiesList"
         android:layout_width="match_parent"
-        android:layout_height="396dp"
-        android:layout_gravity="center">
-s
-    </ListView>
+        android:layout_height="match_parent"
+        android:layout_gravity="center"/>
 
 
 
