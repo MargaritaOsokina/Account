@@ -21,7 +21,7 @@
         </activity>
         <activity android:name=".ActivityIncome" />
         <activity
-            android:name=".ActivityCosts"
+            android:name=".Activity_outcome"
             android:label="@string/title_activity_costs"
             android:theme="@style/AppTheme" />
         <activity

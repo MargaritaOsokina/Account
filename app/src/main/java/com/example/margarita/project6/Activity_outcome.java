@@ -16,7 +16,7 @@ import android.widget.SimpleCursorAdapter;
 
 import java.sql.SQLData;
 
-public class ActivityCosts extends AppCompatActivity {
+public class Activity_outcome extends AppCompatActivity {
 
 
 }

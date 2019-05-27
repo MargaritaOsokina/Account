@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity
                 return true;
 
             case R.id.nav_costs:
-                Intent intent1 = new Intent(this, ActivityCosts.class);
+                Intent intent1 = new Intent(this, Activity_outcome.class);
                 startActivity(intent1);
                 return true;
             default:
@@ -109,7 +109,7 @@ public class MainActivity extends AppCompatActivity
             if (id == R.id.nav_costs) {
                 switch (item.getItemId()) {
                     case R.id.nav_costs:
-                        Intent intent = new Intent(this, ActivityCosts.class);
+                        Intent intent = new Intent(this, Activity_outcome.class);
                         startActivity(intent);
                         return true;
 
@@ -125,7 +125,7 @@ public class MainActivity extends AppCompatActivity
             if (id == R.id.nav_expense_categories) {
                 switch (item.getItemId()) {
                     case R.id.nav_expense_categories:
-                        Intent intent = new Intent(this, ActivityIncome.class);
+                        Intent intent = new Intent(this, Activity_categories_of_outcome.class);
                         startActivity(intent);
                         return true;
             }
@@ -133,7 +133,7 @@ public class MainActivity extends AppCompatActivity
             if (id == R.id.nav_report) {
                 switch (item.getItemId()) {
                     case R.id.nav_report:
-                        Intent intent = new Intent(this, ActivityIncome.class);
+                        Intent intent = new Intent(this, Activity_report.class);
                         startActivity(intent);
                         return true;
             }
