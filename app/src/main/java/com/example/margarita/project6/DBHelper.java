@@ -25,10 +25,6 @@ public class DBHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("CREATE TABLE "+ CATEGORIES + " (_id INTEGER PRIMARY KEY AUTOINCREMENT , cat_name TEXT NOT NULL, type INTEGER  NOT NULL)");
         db.execSQL("CREATE TABLE "+ MONEY + " (_id INTEGER PRIMARY KEY AUTOINCREMENT, money FLOAT NOT NULL,  cat_id INTEGER NOT NULL )");
-        /*db.execSQL("INSERT INTO "+ TABLE_NAME + "
-        db.execSQL("INSERT INTO "+ TABLE_NAME + " VALUES (2, \"Trasport\", 0);");
-        db.execSQL("INSERT INTO "+ TABLE_NAME + " VALUES (5, \"Service\", 0);");*/
-
 
 
     }

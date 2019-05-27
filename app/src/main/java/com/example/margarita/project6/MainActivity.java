@@ -133,7 +133,7 @@ public class MainActivity extends AppCompatActivity
             if (id == R.id.nav_report) {
                 switch (item.getItemId()) {
                     case R.id.nav_report:
-                        Intent intent = new Intent(this, Activity_report.class);
+                        Intent intent = new Intent(this,  ActivityIncome.class);
                         startActivity(intent);
                         return true;
             }
