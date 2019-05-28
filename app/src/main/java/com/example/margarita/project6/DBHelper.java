@@ -11,6 +11,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
     public static final String id = "_id";
     public static final String categor_name = "cat_name";
+    public static final String money = "money";
     public static final int TYPE_INCOME = 1;
     public static final int TYPE_OUTCOME = 0;
 

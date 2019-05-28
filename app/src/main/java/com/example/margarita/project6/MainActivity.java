@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
-    @Override
+  /*  @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity
         //return super.onOptionsItemSelected(item);
         switch (item.getItemId()) {
             case R.id.nav_income:
-                Intent intent = new Intent(this, ActivityIncome.class);
+                Intent intent = new Intent(this, Activity_outcome.class);
                 startActivity(intent);
                 return true;
 
@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity
             default:
                 return super.onOptionsItemSelected(item);
         }
-    }
+    }*/
 
 
     @SuppressWarnings("StatementWithEmptyBody")
@@ -133,7 +133,7 @@ public class MainActivity extends AppCompatActivity
             if (id == R.id.nav_report) {
                 switch (item.getItemId()) {
                     case R.id.nav_report:
-                        Intent intent = new Intent(this,  ActivityIncome.class);
+                        Intent intent = new Intent(this,  Activity_outcome.class);
                         startActivity(intent);
                         return true;
             }
@@ -141,7 +141,7 @@ public class MainActivity extends AppCompatActivity
             if (id == R.id.nav_statistic) {
                 switch (item.getItemId()) {
                     case R.id.nav_statistic:
-                        Intent intent = new Intent(this, ActivityIncome.class);
+                        Intent intent = new Intent(this, Activity_outcome.class);
                         startActivity(intent);
                         return true;
                 }

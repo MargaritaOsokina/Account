@@ -27,6 +27,10 @@
         <activity
             android:name=".Activity_categories_of_income"
             android:label="@string/title_activity_categories_of_income"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Activity_categories_of_outcome"
+            android:label="@string/title_activity_categories_of_outcome"
             android:theme="@style/AppTheme"></activity>
     </application>
 
