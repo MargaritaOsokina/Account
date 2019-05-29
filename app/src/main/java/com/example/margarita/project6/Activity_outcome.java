@@ -15,6 +15,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.GridView;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 
@@ -24,7 +25,7 @@ public class Activity_outcome extends AppCompatActivity  implements View.OnClick
 {
     SQLiteDatabase db;
     DBHelper dbHelper;
-    ListView outcome;
+    GridView gv_outcome;
     Button outcome_btnAdd;
     EditText outcome_money;
     SimpleCursorAdapter scAdapter;
@@ -38,15 +39,17 @@ public class Activity_outcome extends AppCompatActivity  implements View.OnClick
         outcome_btnAdd.setOnClickListener(this);
 
         outcome_money = findViewById(R.id.outcome_money);
-        outcome = findViewById(R.id.outcome);
-        outcome= (ListView) findViewById(R.id.outcome);
+        gv_outcome = findViewById(R.id.gv_outcome);
+        gv_outcome= (GridView) findViewById(R.id.gv_outcome);
 
         dbHelper = new DBHelper(this);
         db = dbHelper.getWritableDatabase();
         showData();
+        adjustGridView();
 
-
-
+    }
+    private void adjustGridView() {
+        gv_outcome.setNumColumns(GridView.AUTO_FIT);
     }
 
     public void showData() {
@@ -54,7 +57,7 @@ public class Activity_outcome extends AppCompatActivity  implements View.OnClick
         Cursor c = db.rawQuery("SELECT * FROM " + DBHelper.CATEGORIES + " WHERE type = " + DBHelper.TYPE_OUTCOME, null);
         int[] to = new int[] { R.id.id, R.id.outcome_money };// создааем адаптер и настраиваем список
         scAdapter = new SimpleCursorAdapter(this, R.layout.outcome_item, c, from, to, 0);
-        outcome.setAdapter(scAdapter);
+        gv_outcome.setAdapter(scAdapter);
 
     }
 

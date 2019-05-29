@@ -31,9 +31,7 @@ protected void onCreate(Bundle savedInstanceState) {
         income_btnAdd = (Button) findViewById(R.id.income_btnAdd);
         income_btnAdd.setOnClickListener(this);
 
-        income_money = findViewById(R.id.income_money);
-        income = findViewById(R.id.income);
-        income= (ListView) findViewById(R.id.income);
+
 
         dbHelper = new DBHelper(this);
         db = dbHelper.getWritableDatabase();

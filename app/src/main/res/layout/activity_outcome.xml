@@ -39,11 +39,11 @@
             android:text="Сохранить">
         </Button>
     </LinearLayout>
-    <ListView
-        android:id="@+id/outcome"
+    <GridView
+        android:id="@+id/gv_outcome"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center"/>
+        android:layout_height="wrap_content">
+    </GridView>
 
 
 </LinearLayout>

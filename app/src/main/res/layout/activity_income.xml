@@ -39,11 +39,11 @@
             android:text="Сохранить">
         </Button>
     </LinearLayout>
-    <ListView
-        android:id="@+id/income"
+
+    <GridView
+        android:id="@+id/gv_income"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center"/>
+        android:layout_height="408dp"></GridView>
 
 
 </LinearLayout>

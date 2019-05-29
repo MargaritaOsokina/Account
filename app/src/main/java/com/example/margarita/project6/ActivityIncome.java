@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.GridView;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 
@@ -15,7 +16,7 @@ public class ActivityIncome extends AppCompatActivity implements View.OnClickLis
 {
     SQLiteDatabase db;
     DBHelper dbHelper;
-    ListView income;
+    GridView gv_income;
     Button income_btnAdd;
     EditText income_money;
     SimpleCursorAdapter scAdapter;
@@ -29,15 +30,18 @@ public class ActivityIncome extends AppCompatActivity implements View.OnClickLis
         income_btnAdd.setOnClickListener(this);
 
         income_money = findViewById(R.id.income_money);
-        income = findViewById(R.id.income);
-        income= (ListView) findViewById(R.id.income);
+        gv_income = findViewById(R.id.gv_income);
+        gv_income= (GridView) findViewById(R.id.gv_income);
 
         dbHelper = new DBHelper(this);
         db = dbHelper.getWritableDatabase();
         showData();
+        adjustGridView();
 
 
-
+    }
+    private void adjustGridView() {
+        gv_income.setNumColumns(GridView.AUTO_FIT);
     }
 
     public void showData() {
@@ -45,7 +49,7 @@ public class ActivityIncome extends AppCompatActivity implements View.OnClickLis
         Cursor c = db.rawQuery("SELECT * FROM " + DBHelper.CATEGORIES + " WHERE type = " + DBHelper.TYPE_INCOME, null);
         int[] to = new int[] { R.id.id, R.id.income_money };// создааем адаптер и настраиваем список
         scAdapter = new SimpleCursorAdapter(this, R.layout.income_item, c, from, to, 0);
-        income.setAdapter(scAdapter);
+        gv_income.setAdapter(scAdapter);
 
     }
 
