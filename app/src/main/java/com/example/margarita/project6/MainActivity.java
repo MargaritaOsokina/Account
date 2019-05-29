@@ -123,7 +123,7 @@ public class MainActivity extends AppCompatActivity
             if (id == R.id.nav_costs) {
                 switch (item.getItemId()) {
                     case R.id.nav_costs:
-                        Intent intent = new Intent(this, ActivityOutcome.class);
+                        Intent intent = new Intent(this, Activity_outcome.class);
                         startActivity(intent);
                         return true;
 
@@ -142,20 +142,20 @@ public class MainActivity extends AppCompatActivity
                         Intent intent = new Intent(this, Activity_categories_of_outcome.class);
                         startActivity(intent);
                         return true;
-            }
+            }/*
         } else
             if (id == R.id.nav_report) {
                 switch (item.getItemId()) {
                     case R.id.nav_report:
-                        Intent intent = new Intent(this,  ActivityIncome.class);
+                        Intent intent = new Intent(this,  Activity_statistics.class);
                         startActivity(intent);
                         return true;
-            }
+            }*/
         } else
             if (id == R.id.nav_statistic) {
                 switch (item.getItemId()) {
                     case R.id.nav_statistic:
-                        Intent intent = new Intent(this, ActivityIncome.class);
+                        Intent intent = new Intent(this, Activity_statistics.class);
                         startActivity(intent);
                         return true;
                 }

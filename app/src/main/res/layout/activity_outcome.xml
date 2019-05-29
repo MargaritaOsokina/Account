@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Activity_categories_of_income">
+    tools:context=".Activity_outcome">
 
     <Spinner
         android:id="@+id/spinner"

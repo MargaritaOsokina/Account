@@ -20,7 +20,55 @@ import android.widget.SimpleCursorAdapter;
 
 import java.sql.SQLData;
 
-public class Activity_outcome extends AppCompatActivity   {
+public class Activity_outcome extends AppCompatActivity  implements View.OnClickListener
+{
+    SQLiteDatabase db;
+    DBHelper dbHelper;
+    ListView outcome;
+    Button outcome_btnAdd;
+    EditText outcome_money;
+    SimpleCursorAdapter scAdapter;
 
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_outcome);
+
+        outcome_btnAdd = (Button) findViewById(R.id.outcome_btnAdd);
+        outcome_btnAdd.setOnClickListener(this);
+
+        outcome_money = findViewById(R.id.outcome_money);
+        outcome = findViewById(R.id.outcome);
+        outcome= (ListView) findViewById(R.id.outcome);
+
+        dbHelper = new DBHelper(this);
+        db = dbHelper.getWritableDatabase();
+        showData();
+
+
+
+    }
+
+    public void showData() {
+        String[] from = new String[] { "_id", "cat_name" };
+        Cursor c = db.rawQuery("SELECT * FROM " + DBHelper.CATEGORIES + " WHERE type = " + DBHelper.TYPE_OUTCOME, null);
+        int[] to = new int[] { R.id.id, R.id.outcome_money };// создааем адаптер и настраиваем список
+        scAdapter = new SimpleCursorAdapter(this, R.layout.outcome_item, c, from, to, 0);
+        outcome.setAdapter(scAdapter);
+
+    }
+
+
+    public void onClick(View v) {
+        String cat = outcome_money.getText().toString();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(DBHelper.money, cat);
+        contentValues.put("type", DBHelper.TYPE_OUTCOME);
+        db.insert(DBHelper.CATEGORIES, null, contentValues);
+        showData();
+
+    }
 
 }
+
+
