@@ -39,9 +39,9 @@ public class Activity_categories_of_income extends AppCompatActivity implements 
 
     }
     public void showData() {
-          String[] from = new String[] { "_id", "cat_name" };
+          String[] from = new String[] {  "cat_name" };
         Cursor c = db.rawQuery("SELECT * FROM " + DBHelper.CATEGORIES + " WHERE type = " + DBHelper.TYPE_INCOME, null);
-        int[] to = new int[] { R.id.id, R.id.cat_name };// создааем адаптер и настраиваем список
+        int[] to = new int[] { R.id.cat_name };// создааем адаптер и настраиваем список
         scAdapter = new SimpleCursorAdapter(this, R.layout.category_item, c, from, to, 0);
         income_cat.setAdapter(scAdapter);
 

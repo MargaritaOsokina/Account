@@ -17,7 +17,7 @@
 
 
     <EditText
-        android:id="@+id/income_money"
+        android:id="@+id/outcome_money"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Введите сумму" />
@@ -28,7 +28,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <Button
-            android:id="@+id/income_btnAdd"
+            android:id="@+id/outcome_btnAdd"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="40sp"
@@ -40,7 +40,7 @@
         </Button>
     </LinearLayout>
     <ListView
-        android:id="@+id/income"
+        android:id="@+id/outcome"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center"/>

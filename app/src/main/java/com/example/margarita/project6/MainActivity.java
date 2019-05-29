@@ -91,12 +91,12 @@ public class MainActivity extends AppCompatActivity
                 return super.onOptionsItemSelected(item);
         }
     }*/
- /* SQLiteDatabase db;
+ /*/ SQLiteDatabase db;
   DBHelper dbHelper;
   SimpleCursorAdapter scAdapter;
   public void showData2() {
       String[] from = new String[] {  "cat_name" };
-      Cursor c = db.rawQuery("SELECT " + DBHelper.money + DBHelper.categor_name +" FROM  " + DBHelper.MONEY, );
+      Cursor c = db.rawQuery("SELECT " + DBHelper.money + DBHelper.categor_name +" FROM  " + DBHelper.MONEY+ );
       int[] to = new int[] { R.id.cat_name };// создааем адаптер и настраиваем список
       scAdapter = new SimpleCursorAdapter(this, R.layout.category_item, c, from, to, 0);
       income_cat.setAdapter(scAdapter);

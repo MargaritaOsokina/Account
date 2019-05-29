@@ -13,4 +13,5 @@
     <string name="title_activity_costs">ActivityCosts</string>
     <string name="title_activity_categories_of_income">Activity_categories_of_income</string>
     <string name="title_activity_categories_of_outcome">Activity_categories_of_outcome</string>
+    <string name="title_activity_outcome">ActivityOutcome</string>
 </resources>

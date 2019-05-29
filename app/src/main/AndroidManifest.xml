@@ -31,6 +31,10 @@
         <activity
             android:name=".Activity_categories_of_outcome"
             android:label="@string/title_activity_categories_of_outcome"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".ActivityOutcome"
+            android:label="@string/title_activity_outcome"
             android:theme="@style/AppTheme"></activity>
     </application>
 
