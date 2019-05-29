@@ -26,7 +26,7 @@
         android:title="Отчет" />-->
         <item
             android:id="@+id/nav_statistic"
-            android:icon="@drawable/ic_menu_statistic"
+            android:icon="@drawable/ic_bar_statistics"
             android:title="Статистика" />
 
     </group>
