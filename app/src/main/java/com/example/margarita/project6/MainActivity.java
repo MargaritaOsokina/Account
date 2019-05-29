@@ -1,6 +1,8 @@
 package com.example.margarita.project6;
 
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -13,6 +15,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.SimpleCursorAdapter;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -88,7 +91,18 @@ public class MainActivity extends AppCompatActivity
                 return super.onOptionsItemSelected(item);
         }
     }*/
+ /* SQLiteDatabase db;
+  DBHelper dbHelper;
+  SimpleCursorAdapter scAdapter;
+  public void showData2() {
+      String[] from = new String[] {  "cat_name" };
+      Cursor c = db.rawQuery("SELECT " + DBHelper.money + DBHelper.categor_name +" FROM  " + DBHelper.MONEY, );
+      int[] to = new int[] { R.id.cat_name };// создааем адаптер и настраиваем список
+      scAdapter = new SimpleCursorAdapter(this, R.layout.category_item, c, from, to, 0);
+      income_cat.setAdapter(scAdapter);
+      showData2();
 
+  }*/
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
@@ -109,7 +123,7 @@ public class MainActivity extends AppCompatActivity
             if (id == R.id.nav_costs) {
                 switch (item.getItemId()) {
                     case R.id.nav_costs:
-                        Intent intent = new Intent(this, Activity_outcome.class);
+                        Intent intent = new Intent(this, ActivityOutcome.class);
                         startActivity(intent);
                         return true;
 
@@ -133,7 +147,7 @@ public class MainActivity extends AppCompatActivity
             if (id == R.id.nav_report) {
                 switch (item.getItemId()) {
                     case R.id.nav_report:
-                        Intent intent = new Intent(this,  Activity_outcome.class);
+                        Intent intent = new Intent(this,  ActivityIncome.class);
                         startActivity(intent);
                         return true;
             }
@@ -141,7 +155,7 @@ public class MainActivity extends AppCompatActivity
             if (id == R.id.nav_statistic) {
                 switch (item.getItemId()) {
                     case R.id.nav_statistic:
-                        Intent intent = new Intent(this, Activity_outcome.class);
+                        Intent intent = new Intent(this, ActivityIncome.class);
                         startActivity(intent);
                         return true;
                 }
