@@ -5,7 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Activity_categories_of_income">
+    tools:context=".Activity_categories_of_income"
+    android:theme="@style/black"
+    >
 
     <EditText
         android:layout_marginTop="30sp"
@@ -21,14 +23,13 @@
         android:layout_height="wrap_content">
 
         <Button
-            style="@style/Base.CardView"
+
             android:id="@+id/btnAdd"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="40sp"
             android:layout_marginRight="40sp"
             android:layout_marginBottom="20sp"
-
             android:textSize="15dp"
             android:text="Добавить">
     </Button>

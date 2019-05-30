@@ -6,6 +6,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.GridView;
@@ -37,8 +38,6 @@ public class ActivityIncome extends AppCompatActivity implements View.OnClickLis
         db = dbHelper.getWritableDatabase();
         showData();
         adjustGridView();
-
-
     }
     private void adjustGridView() {
         gv_income.setNumColumns(GridView.AUTO_FIT);
